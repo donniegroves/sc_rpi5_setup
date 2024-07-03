@@ -26,12 +26,15 @@
 
 ## Starting a basic nginx webserver
 
-`sudo apt install nginx`
-`sudo systemctl start nginx` (this will serve on port 80)
-`sudo systemctl enable nginx`
+1. `sudo apt install nginx`
+2. `sudo systemctl start nginx` (this will serve on port 80)
+3. `sudo systemctl enable nginx`
+
 You can change the port and nginx defaults by doing: `sudo nano /etc/nginx/sites-available/default`
-`sudo systemctl restart nginx`
-Default served folder is `/var/www/html`
+
+4. `sudo systemctl restart nginx`
+
+The default served folder is `/var/www/html`
 
 # Routing traffic for your own domain with Cloudflare Tunnels
 
