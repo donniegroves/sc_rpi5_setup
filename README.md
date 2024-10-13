@@ -89,3 +89,25 @@ You can optionally set the new DNS network-wide with your router. All routers ar
 - [Home Assistant](https://www.home-assistant.io)
 - [Pi-hole](https://pi-hole.net/)
 - [Pi-hole docs](https://docs.pi-hole.net/)
+- [Cloudflare Tunnel info](https://blog.cloudflare.com/tunnel-for-everyone)
+- [Cloudflare Tunnel setup](https://pimylifeup.com/raspberry-pi-cloudflare-tunnel/)
+- [Docker setup](https://docs.docker.com/engine/install/debian/)
+- [DNSSEC related](https://developers.cloudflare.com/dns/dnssec/#disable-dnssec)
+- [Assigning static IPs 1](https://www.youtube.com/watch?v=-G3ePnXAoHc)
+- [Assigning Static IPs 2](https://www.youtube.com/watch?v=dCAsHdRBrag)
+
+
+# FAQ
+  Q1: I cannot get `cloudflared` setup to work through Cloudflare's GUI. What else can I try?
+  
+  A1: You can install `cloudflared` Linux Debian (amd64/x86-64) daemon from the CLI on the Pi. Running these commands will save the key for the cloudflared repo, add the cloudflared repo, update the repos on the pi:
+  ```bash
+  sudo apt update && sudo apt upgrade
+  sudo apt install curl lsb-release
+  curl -L https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-archive-keyring.gpg >/dev/null
+  echo "deb [signed-by=/usr/share/keyrings/cloudflare-archive-keyring.gpg] https://pkg.cloudflare.com/cloudflared $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflared.list
+  sudo apt update
+  sudo apt install cloudflared
+  cloudflared tunnel login
+  ```
+  
