@@ -85,7 +85,7 @@ You can optionally set the new DNS network-wide with your router. All routers ar
 
 
 # Resources
-Home Assistant for Pi: https://www.home-assistant.io/installation/raspberrypi/
-Home Assistant: https://www.home-assistant.io
-Pi-hole: https://pi-hole.net/
-Pi-hole docs: https://docs.pi-hole.net/
+- [Home Assistant for Pi](https://www.home-assistant.io/installation/raspberrypi/)
+- [Home Assistant](https://www.home-assistant.io)
+- [Pi-hole](https://pi-hole.net/)
+- [Pi-hole docs](https://docs.pi-hole.net/)
